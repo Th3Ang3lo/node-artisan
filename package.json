@@ -1,0 +1,12 @@
+{
+  "name": "node-artisan",
+  "version": "1.0.0",
+  "main": "bin/node-artisan.js",
+  "license": "MIT",
+  "bin": "bin/node-artisan.js",
+  "type": "module",
+  "dependencies": {
+    "chalk": "^5.0.0",
+    "esm": "^3.2.25"
+  }
+}
