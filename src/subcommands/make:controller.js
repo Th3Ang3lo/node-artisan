@@ -10,9 +10,10 @@ import * as fileValidations from '../validations/file.js'
 
 export async function makeController (args) {
   try {
-    const controllerName = capitalizeFirstLetter(args[0])
+    const fileDirectories = args[0].split('/')
+    const controllerName = capitalizeFirstLetter(fileDirectories[fileDirectories.length - 1]).trim()
 
-    const controllersPath = path.resolve('src/controllers')
+    const controllersPath = path.resolve(`src/controllers/${fileDirectories.slice(1).join('/')}`)
     const controllerToCreate = controllersPath + `/${controllerName}.ts`
 
     fileValidations.validateFileName(controllerToCreate, controllerName, 'controllers')
@@ -28,5 +29,5 @@ export async function makeController (args) {
     console.log(error)
   }
 
-  process.exit(1)
+  process.exit()
 }
