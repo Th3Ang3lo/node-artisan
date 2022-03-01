@@ -7,10 +7,10 @@ export async function cmd(args) {
     console.log(`${yellow('Usage:')}`)
     console.log(`  ${white('node-artisan [options] [arguments]')}`)
     console.log(` `)
-    console.log(`${yellow('Available Commands:')}`)
+    console.log(yellow('Available Commands:'))
     console.log(`  ${green('make:controller')}    ${white('Create an controller.')}`)
-    console.log(`  ${green('make:service')}       ${white('Create an service.')}`)
-    console.log(`  ${green('make:repository')}    ${white('Create an repository.')}`)
+    // console.log(`  ${green('make:service')}       ${white('Create an service.')}`)
+    // console.log(`  ${green('make:repository')}    ${white('Create an repository.')}`)
     return process.exit()
   }
 
@@ -19,7 +19,7 @@ export async function cmd(args) {
       await makeController(args.slice(1))
       break
     default:
-      console.log(`${red(`OPS! The subcommand named \"${args[0]}\" not exists.`)}`)
+      console.log(red(`OPS! The subcommand named \"${args[0]}\" not exists.`))
       break
   }
 
