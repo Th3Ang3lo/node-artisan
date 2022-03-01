@@ -1,6 +1,7 @@
 import fs from 'fs'
 
 import controllerTemplate from '../templates/controller.js'
+import serviceTemplate from '../templates/service.js'
 
 export const getFile = (fileName) => {
   return fs.readFileSync(fileName).toString()
@@ -21,5 +22,7 @@ export const getTemplate = template => {
   switch (template) {
     case 'controller':
       return controllerTemplate
+    case 'service':
+        return serviceTemplate
   }
 }
