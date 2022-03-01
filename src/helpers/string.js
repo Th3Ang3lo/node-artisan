@@ -5,3 +5,8 @@ export const capitalizeFirstLetter = (string) => {
 export const stringStartsWithNumber = string => {
   return string.match(new RegExp(/^\d/)) !== null
 }
+
+export const containsSpecialChars = string => {
+  const specialChars = /[`!ç@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+  return specialChars.test(string);
+}
