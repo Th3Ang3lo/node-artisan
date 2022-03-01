@@ -1,7 +1,7 @@
 export default `
 import { Request, Response } from 'express'
 
-export class %controllerName%  {
+export class %controllerName% {
   public async handle (request: Request, response: Response): Promise<Response> {
     try {
 
