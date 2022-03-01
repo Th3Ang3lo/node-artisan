@@ -1,8 +1,8 @@
 <h1 align="center">Node Artisan</h1>
 
-<center>
+<p align="center">
   <img src="https://cdn.discordapp.com/attachments/813305507774726176/948071878180868116/Sem_titulo-1.svg" width="70">
-</center>
+</div>
 
 <p align="center">
   A simple CLI package to create empty controllers and services using typescript.
