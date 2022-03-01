@@ -1,5 +1,10 @@
 {
   "name": "node-artisan",
+  "author": {
+    "email": "angeelosoares@gmail.com",
+    "name": "Angelo Soares",
+    "url": "https://harkin.com.br"
+  },
   "version": "1.1.2",
   "main": "bin/node-artisan.js",
   "license": "MIT",
