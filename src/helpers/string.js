@@ -3,5 +3,5 @@ export const capitalizeFirstLetter = (string) => {
 }
 
 export const stringStartsWithNumber = string => {
-  return match(new RegExp(/^\d/)) !== null
+  return string.match(new RegExp(/^\d/)) !== null
 }
