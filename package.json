@@ -1,6 +1,6 @@
 {
   "name": "node-artisan",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "bin/node-artisan.js",
   "license": "MIT",
   "bin": "bin/node-artisan.js",
