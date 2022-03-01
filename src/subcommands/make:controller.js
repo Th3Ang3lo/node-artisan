@@ -4,16 +4,17 @@ import * as fileHelper from '../helpers/file.js'
 
 import { green } from '../helpers/colors.js'
 
-import { capitalizeFirstLetter } from '../helpers/string.js'
+import * as stringHelper from '../helpers/string.js'
 
 import * as fileValidations from '../validations/file.js'
 
 export async function makeController (args) {
   try {
     const fileDirectories = args[0].split('/')
-    const controllerName = capitalizeFirstLetter(fileDirectories[fileDirectories.length - 1]).trim()
+    const controllerName = stringHelper.capitalizeFirstLetter((fileDirectories[fileDirectories.length - 1]).trim())
+    fileDirectories.pop()
 
-    const controllersPath = path.resolve(`src/controllers/${fileDirectories.slice(1).join('/')}`)
+    const controllersPath = path.resolve(`src/controllers/${fileDirectories.join('/')}`)
     const controllerToCreate = controllersPath + `/${controllerName}.ts`
 
     fileValidations.validateFileName(controllerToCreate, controllerName, 'controllers')
